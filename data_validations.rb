@@ -5,8 +5,8 @@ ActiveRecord::Validations
 #Validations are just making sure that attributes follow the rules
 
 #so, for 
-validates_presence_of :name :on(:save, :create, :update)
-#the name portion of the model is required to be present- and it won't save to the db. Only runs when saving, creating, or updating
+validates :name, :presence => true, :length => {:maximum => 50} :on => :create
+#the name portion of the model is required to be present- and it won't save to the db. Only runs when creating
 
 validates_presence_of
 validates_length_of :name, :within => 3..40 #:is #:minimum #:maximum
@@ -29,3 +29,6 @@ def custom_method
     errors.add(:name, 'this is the message')
   end
 end
+
+
+

@@ -28,3 +28,52 @@ class User < ApplicationRecord
   PLUCK #better than select, it return an array of data
   product.where(active: true).pluck(:id, :name)
   # => [[1, "Coffee Mug"], ...]
+
+  class Book,or (BookClub) you should have a database table called book or book_clubs
+    and for Person it should be people
+    
+    
+    Creating Models
+    All you have to do is to subclass the ApplicationRecord class and you're good to go:
+    
+class Book < ApplicationRecord
+end
+
+This will create a Product model, mapped to a products table at the database. 
+
+
+//create
+user = User.new
+user.name = "David"
+user.occupation = "Code Artist"
+user.save //will commmit to db
+
+
+# return a collection with all users
+users = User.all
+# return the first user
+user = User.first
+# return the first user named David
+david = User.find_by(name: 'David')
+
+
+//update
+
+# return a collection with all users
+users = User.all
+# return the first user
+user = User.first
+# return the first user named David
+david = User.find_by(name: 'David')
+
+//delete
+
+user = User.find_by(name: 'David')
+user.destroy
+
+
+//validations
+
+class User < ApplicationRecord
+  validates :name, presence: true
+end

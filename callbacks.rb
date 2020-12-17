@@ -1,4 +1,5 @@
-# ActiveRecord give way to intervene in an objects life cycle - like it pauses before/after an object is created/updated/destroyed. 
+# ActiveRecord gives a way to intervene in an objects life cycle - 
+#   like it pauses before/after an object is created/updated/destroyed. 
 # IE a 'code hook'
 
 # before_validation

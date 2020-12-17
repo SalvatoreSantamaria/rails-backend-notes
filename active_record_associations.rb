@@ -1,3 +1,7 @@
+#what is activerecord?
+#Rails activerecord is an interface and binding between tables in a relation db and the ruby code that manipulates the db records.
+
+
 # one to one ####################################################################################################################################################
   # classroom has one teacher
   # one teacher belongs to one classroom
@@ -30,7 +34,7 @@
 #     there is a join table that has two foreign keys in the table (but the join table does not have a model)
       
       has_and_belongs_to_many       #for when an object has many objectts that belong to it but not exclusively
-      
+
       class BlogPost < ApplicationRecord
         has_and_belongs_to_many :categories
       class Category < ApplicationRecord
